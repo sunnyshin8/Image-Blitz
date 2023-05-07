@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body>
+    <!-- upload code here -->
+    <div id="upload_form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <input type="file" name="uploaded_file" id="uploaded_file" accept="image/*">
+            <button id="upload_btn" type="submit">Upload image</button>
+        </form>
+        <a href="{{url_for('index')}}"><button>Back</button></a>
+    </div>
+    <div id="processing" hidden>
+        <h4>Processing...</h4>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='web/js/upload.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Upload Image</title>
+</head>
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+ body {
+  background: #f6f6f6;
+  color: #444;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+ }
+
+ .container {
+  max-width: 1100px;
+  padding: 0px 20px;
+  /* border: 2px solid red; */
+  margin: 0 auto;
+  height: 366px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .button_outer {
+  background: #232def;
+  border-radius: 30px;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  display: inline-block;
+  transition: .2s;
+  position: relative;
+  overflow: hidden;
+ }
+
+ .btn_upload {
+  padding: 17px 30px 12px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 3;
+  white-space: nowrap;
+ }
+
+ .btn_upload input {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 105%;
+  cursor: pointer;
+  opacity: 0;
+ }
+</style>
+
+<body>
+ <main class="main_full">
+  <div class="container">
+   <div class="button_outer">
+    <div class="btn_upload">
+     <form action="" method="post">
+      <input type="file" id="uploaded_file" name="uploaded_file">
+      Upload Image
+     </form>
+    </div>
+   </div>
+  </div>
+ </main>
+</body>
+
+</html>

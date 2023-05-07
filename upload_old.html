@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+    <title>Upload Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            display: flex;
+            align-items: center;
+            background: center / cover no-repeat url("{{ url_for('static', filename='images/Upload_Image.jpeg') }}");
+            height: 100vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+        }
+
+        .upload {
+            margin: 110px 10px 9px 30px;
+            height: 50%;
+            width: 38%;
+            /* border: 2px solid black; */
+        }
+
+
+        #uploaded_file {
+            display: flex;
+            flex-direction: column;
+            margin: 50px 138px;
+            padding: 7px 18px;
+        }
+
+        input {
+            padding: 10px 10px;
+            border: 2px solid black;
+            border-radius: 9px;
+        }
+
+        .btn {
+            margin: 57px 158px;
+            padding: 14px 71px;
+            border: 2px solid black;
+            border-radius: 8px;
+            background: #2d63dd;
+            color: black;
+            font-size: 18px;
+        }
+
+        .btn_back {
+            padding: 4px 30px;
+            margin: 28px 241px;
+            border: 2px solid black;
+            border-radius: 8px;
+            background: cornflowerblue;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="upload">
+            <!-- upload code here -->
+            <form action="" method="POST" enctype="multipart/form-data">
+                <input type="file" name="uploaded_file" id="uploaded_file" accept="image/*">
+                <button id="id_btn" class="btn" type="submit">Upload image</button>
+            </form>
+            <a href="{{url_for('index')}}"><button class="btn_back">Back</button></a>
+        </div>
+    </div>
+
+
+    <!-- Loader
+    <script type="text/javascript">
+        var buttonpressed = false;
+
+        function waitForIt() {
+            if (!buttonpressed) {
+                setTimeout(waitForIt, 2500);
+            } else {
+                document.getElementById('id_btn').value = 'ok';
+            }
+        }
+
+        function startSomething() {
+            document.getElementById('id_btn').value = '';
+            waitForIt();
+            document.getElementById('id_btn').value = 'waiting';
+        }
+
+        function setButtonPressed() {
+            buttonpressed = true;
+        } -->
+
+    </script>
+</body>
+
+</html>
