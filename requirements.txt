@@ -1,0 +1,11 @@
+flask
+numpy
+pandas
+matplotlib
+shutils
+glob2
+opencv-python
+torch
+basicsr
+facexlib
+Flask-SQLAlchemy
